@@ -3,25 +3,63 @@
 	<head>
 		<title>Tuiter - Twitter API library for nodejs</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+		<style type="text/css">
+      body {padding-top: 60px; padding-bottom: 40px;}  
+			.hero-unit {text-align: center;}
+		</style>
+		<link rel="stylesheet" href="css/bootstrap-responsive.min.css" type="text/css" />
 	</head>
 	<body>
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
-				<div class="container">
+				<div class="container-fluid">
 					<a class="brand" href="#">Tuiter</a>
 					<ul class="nav">
-						<li>gi</li>
+						<li class="active">
+							<a href="#">Intro</a>
+						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		</div>
 		<div class="container-fluid">
 			<div class="row-fluid">
-				<div class="span4">
+				<div class="span3 sidebar-nav">
+					<ul>
+						
+					</ul>
 				</div>
-				<div class="span8">
+				<div class="span9">
+					<div class="hero-unit">
+						<h1>Tuiter</h1>
+						<h3>Simple Twitter API library for Nodejs</h3>
+					</div>
+					<div class="row-fluid">
+						<div class="span9" id="intro">
+							<h3>Intro</h3>
+<pre class="span5 offset2">
+  var Tuiter = require('tuiter');
+
+  var tuit = new Tuiter({
+    "consumer_key" : "blablablablablabl"
+    , "consumer_secret" : "blablablablab"
+    , "access_token_key" : "blablablabla"
+    , "access_token_secret" : "blablabla"
+  });
+					
+  tuit.search({q: 'reptar'}, function(err, data){
+    console.log(data);
+  });
+</pre>
+						</div>
+					</div>
+					<div class="row-fluid">
+						<div class="span9" id="installation">
+							<h3>Installation</h3>
+							<code>npm install tuiter</code>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
